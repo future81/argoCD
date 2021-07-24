@@ -4,5 +4,13 @@ namespace:
 image:
   repository: nginx
   tag: alpine
-
+  pullpolicy: IfNotPresent
+resources:
+  CPU: 50m
+  memory: 256Mi
+servic:
+  port: 8111
+  type: ClusterIP
+configmap:
+  data: "version: alpine"
 replicaCount: 3
