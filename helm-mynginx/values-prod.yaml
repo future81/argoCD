@@ -1,2 +1,11 @@
 namespace:
   name: prod 
+image:
+  tag: 1.17.0
+resources:
+  CPU: 70m
+service:
+  port: 80
+configmap:
+  version: 1.17.0
+replicaCount: 2
